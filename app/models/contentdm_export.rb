@@ -116,7 +116,6 @@ class ContentdmExport
       # IUPUI CDM no longer provides API on port 445
       # The API is now available on port 2012
       # Also needs to replace &amp; with just &
-      path = path.sub(/445\/cgi-bin/, '2012/cgi-bin')
-      path.sub('&amp;', '&')
+      CGI.unescapeHTML(path.sub(/445\/cgi-bin/, '2012/cgi-bin'))
     end
 end
