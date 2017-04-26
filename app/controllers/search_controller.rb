@@ -1,6 +1,7 @@
 class SearchController < ApplicationController
 
   def search
-    render 'search/search.html.erb'
+
+    respond_to :json
   end
 end
